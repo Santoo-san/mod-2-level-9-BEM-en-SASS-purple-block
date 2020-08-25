@@ -1,0 +1,26 @@
+.block {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: purple;
+  border: 1px dashed purple;
+}
+
+.block__element {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 200px;
+  margin: 50px;
+}
+
+.block--reversed {
+  background: white;
+  border-color: lightgray;
+}
+
+.block--reversed .block__element {
+  background: purple;
+}
+/*# sourceMappingURL=styles.css.map */
