@@ -1,32 +1,30 @@
-@mixin purpleblock {
+@mixin purpleblock ($bgr){
     display: block;
     width: 200px;
     height: 200px;
     border: 1px dashed purple;
+    background:$bgr
 }
-@mixin circle {
+@mixin circle ($bgr){
     display: block;
         width: 100px;
         height: 100px;
         border-radius:200px;
         margin:50px;
+        background:$bgr
 }
 
 .block {
     $self: &;
-    @include purpleblock;
-    background:purple;
+    @include purpleblock (purple);
     &__element {
-        @include circle;
-        background:white;
+        @include circle (white);
     }
     &--reversed {
-        @include purpleblock;
-        background: white;
+        @include purpleblock (white);
         
         #{ $self }__element {
-            @include circle;
-            background: purple;
+            @include circle (purple);
         }
     }
 }  
